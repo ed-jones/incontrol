@@ -16,7 +16,11 @@ func _process(_delta):
 		direction_down + \
 		direction_left
 
-	var _move = move_and_collide(direction*velocity)
+	var collision = move_and_collide(direction*velocity)
+	
+	if collision:
+		if collision.collider.has_method("nextRoom"):
+			collision.collider.nextRoom()
 
 # Code to move player up
 func move_up():

@@ -10,3 +10,6 @@ func openDoor():
 	
 func closeDoor():
 	isOpen = false
+
+func nextRoom():
+	print("HERE")
