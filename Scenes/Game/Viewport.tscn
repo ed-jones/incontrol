@@ -3,9 +3,9 @@
 [ext_resource path="res://Scenes/Game/Main.tscn" type="PackedScene" id=1]
 
 [node name="ViewportContainer" type="ViewportContainer"]
-margin_left = 1.45709
+margin_left = -1.45709
 margin_top = -1.45709
-margin_right = 1025.46
+margin_right = 1022.55
 margin_bottom = 1022.54
 
 [node name="Viewport" type="Viewport" parent="."]

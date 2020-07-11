@@ -4,7 +4,7 @@ var direction_up: Vector2
 var direction_right: Vector2
 var direction_down: Vector2
 var direction_left: Vector2
-var velocity: float = 5
+var velocity: float = 4
 
 func _ready():
 	pass # Replace with function body.
