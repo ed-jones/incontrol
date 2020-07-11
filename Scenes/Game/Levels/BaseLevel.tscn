@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scenes/Tiles/TileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Tiles/LevelTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player/PlayerB/PlayerB.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player/PlayerA/PlayerA.tscn" type="PackedScene" id=3]
 

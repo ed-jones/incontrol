@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pressurePlate.png-bff7219940b2a56119e1d05f7a6aa15f.stex"
+path="res://.import/wall.png-ae64c04548c646c1ca66ca55a9212c40.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Interactables/PressurePlate/pressurePlate.png"
-dest_files=[ "res://.import/pressurePlate.png-bff7219940b2a56119e1d05f7a6aa15f.stex" ]
+source_file="res://Scenes/Tiles/Assets/wall.png"
+dest_files=[ "res://.import/wall.png-ae64c04548c646c1ca66ca55a9212c40.stex" ]
 
 [params]
 
