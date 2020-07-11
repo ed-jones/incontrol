@@ -5,14 +5,16 @@
 [ext_resource path="res://Scenes/Player/PlayerB/PlayerB.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 27.9285, 34.5442 )
+extents = Vector2( 32, 32 )
 
-[node name="Player" instance=ExtResource( 1 )]
+[node name="PlayerB" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 0.563293, 15.4907 )
+position = Vector2( 32, 32 )
 shape = SubResource( 1 )
 
 [node name="Sprite" parent="." index="1"]
+position = Vector2( -12, -30 )
 texture = ExtResource( 3 )
+centered = false
