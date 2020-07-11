@@ -10,8 +10,12 @@ position = Vector2( 1.19739, 0 )
 layer = -100
 
 [node name="ColorRect" type="ColorRect" parent="BackgroundColor"]
-color = Color( 0.54902, 0.54902, 0.54902, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.113725, 0.0941176, 0.192157, 1 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Level" parent="." instance=ExtResource( 4 )]
-script = null

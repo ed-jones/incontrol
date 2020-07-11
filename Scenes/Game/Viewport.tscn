@@ -16,6 +16,4 @@ size = Vector2( 1024, 768 )
 handle_input_locally = false
 render_target_update_mode = 3
 
-[node name="Camera2D" type="Camera2D" parent="Viewport"]
-
-[node name="Game" parent="Viewport" instance=ExtResource( 1 )]
+[node name="Game" parent="." instance=ExtResource( 1 )]
