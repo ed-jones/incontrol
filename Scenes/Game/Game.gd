@@ -17,4 +17,3 @@ func nextRoom():
 		nextRoomNumber+=1
 	else:
 		push_error("Tried to access a level that doesn't exist")
-	

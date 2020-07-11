@@ -12,4 +12,5 @@ func closeDoor():
 	isOpen = false
 
 func nextRoom():
-	print("NEXT ROOM")
+	if isOpen:
+		find_parent("Game").nextRoom()
