@@ -22,13 +22,13 @@ func _process(_delta):
 		false, 4, PI/4, false
 		)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 
 	for index in get_slide_count():
 		var collision = get_slide_collision(index)
 		if collision.collider.is_in_group("bodies"):
 			collision.collider.apply_central_impulse(-collision.normal * push)
-		if collision.collider.has_method("nextRoom"):
+		if collision.collider.is_in_group("doors"):
 			collision.collider.nextRoom()
 
 # Code to move player up

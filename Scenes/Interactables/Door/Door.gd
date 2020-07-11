@@ -12,4 +12,4 @@ func closeDoor():
 	isOpen = false
 
 func nextRoom():
-	print("HERE")
+	print("NEXT ROOM")

@@ -14,8 +14,6 @@ func _ready():
 func _on_Body_body_entered(by_body):
 	print("Body entered: " + by_body)
 
-func 
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

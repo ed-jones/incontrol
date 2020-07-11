@@ -1,17 +1,20 @@
 extends Node2D
 
+const levels: Array = [
+	preload("res://Scenes/Game/Levels/Level1.tscn"),
+	preload("res://Scenes/Game/Levels/Level2.tscn")
+]
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var nextRoomNumber: int = 0
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var level = preload("res://Scenes/Game/Levels/Level1.tscn").instance()
-	add_child(level)
+	nextRoom()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func nextRoom():
+	if (nextRoomNumber < len(levels)):
+		if has_node("Level"): remove_child($Level)
+		add_child(levels[nextRoomNumber].instance())
+		nextRoomNumber+=1
+	else:
+		push_error("Tried to access a level that doesn't exist")
+	
