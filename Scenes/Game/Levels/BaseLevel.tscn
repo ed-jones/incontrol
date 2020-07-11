@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Game/ColorRect.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/PlayerB/PlayerB.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player/PlayerA/PlayerA.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Game/Tiles.gd" type="Script" id=4]
-[ext_resource path="res://Scenes/Interactables/PressurePlate/PressurePlate.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Interactables/Box/Box.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Interactables/Door/Door.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 1.19739, 0 )
@@ -23,16 +20,7 @@ script = ExtResource( 1 )
 position = Vector2( 183.469, 99.0833 )
 
 [node name="PlayerA" parent="." instance=ExtResource( 3 )]
-position = Vector2( 169.323, 566.379 )
+position = Vector2( 181.322, 581.978 )
 
 [node name="Tiles" type="Node" parent="."]
 script = ExtResource( 4 )
-
-[node name="Node2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 483.677, 166.646 )
-
-[node name="Box" parent="." instance=ExtResource( 6 )]
-position = Vector2( 265.298, 248.238 )
-
-[node name="Door" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1016.42, 172.645 )
