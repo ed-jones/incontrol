@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player/PlayerB/PlayerB.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player/PlayerA/PlayerA.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Game/Walls.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1.19739, 0 )
+
+[node name="PlayerB" parent="." instance=ExtResource( 1 )]
+position = Vector2( 183.469, 99.0833 )
+
+[node name="PlayerA" parent="." instance=ExtResource( 2 )]
+position = Vector2( 523.289, 138.021 )
+
+[node name="Walls" type="Node" parent="."]
+script = ExtResource( 3 )
