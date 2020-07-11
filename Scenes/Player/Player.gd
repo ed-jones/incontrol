@@ -19,16 +19,14 @@ func _process(_delta):
 		direction_left
 
 	var _collision = move_and_slide(direction*velocity, Vector2.UP,
-		false, 4, PI/4, false
-		)
+		false, 4, PI/4, false)
 
 func _physics_process(_delta):
-
 	for index in get_slide_count():
 		var collision = get_slide_collision(index)
 		if collision.collider.is_in_group("bodies"):
 			collision.collider.apply_central_impulse(-collision.normal * push)
-		if collision.collider.is_in_group("doors"):
+		if collision.collider.is_in_group("Doors"):
 			collision.collider.nextRoom()
 
 # Code to move player up

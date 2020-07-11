@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Interactables/Pushable.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Tiles/Assets/box.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Interactables/Box/Box.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Tiles/Assets/box.png" type="Texture" id=3]
 
 [node name="Box" instance=ExtResource( 1 )]
+contacts_reported = 100
+contact_monitor = true
+script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="1"]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_Box_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Box_body_exited"]

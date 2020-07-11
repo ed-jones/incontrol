@@ -1,9 +1,12 @@
 extends StaticBody2D
 
-var isPressed: bool = false
+signal isPressed(isPressed)
+
+func _ready():
+	pass
 
 func press():
-	isPressed = true
+	emit_signal('isPressed', true)
 
 func release():
-	isPressed = false
+	emit_signal('isPressed', false)

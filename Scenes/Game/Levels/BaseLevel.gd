@@ -1,10 +1,17 @@
 extends Node2D
 
 const Box = preload("res://Scenes/Interactables/Box/Box.tscn")
-const Door = preload("res://Scenes/Interactables/Door/Door.tscn")
-const PressurePlate = preload("res://Scenes/Interactables/PressurePlate/PressurePlate.tscn")
+const RedDoor = preload("res://Scenes/Interactables/Door/RedDoor.tscn")
+const BlueDoor = preload("res://Scenes/Interactables/Door/BlueDoor.tscn")
+const RedPressurePlate = preload("res://Scenes/Interactables/PressurePlate/RedPressurePlate.tscn")
+const BluePressurePlate = preload("res://Scenes/Interactables/PressurePlate/BluePressurePlate.tscn")
 
 onready var TileMap = $TileMap
+
+var redPressurePlates = []
+var bluePressurePlates = []
+var redDoors = []
+var blueDoors = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,14 +26,33 @@ func _ready():
 		elif tile_name == "Box":
 			var box = Box.instance()
 			replace_tile(tile_xy, box)
-		elif tile_name == "PressurePlate":
-			var pressurePlate = PressurePlate.instance()
-			replace_tile(tile_xy, pressurePlate)
-		elif tile_name == "Door":
-			var door = Door.instance()
-			replace_tile(tile_xy, door)
+		elif tile_name == "RedPressurePlate":
+			var redPressurePlate = RedPressurePlate.instance()
+			redPressurePlates.append(redPressurePlate)
+			replace_tile(tile_xy, redPressurePlate)
+		elif tile_name == "BluePressurePlate":
+			var bluePressurePlate = BluePressurePlate.instance()
+			bluePressurePlates.append(bluePressurePlate)
+			replace_tile(tile_xy, bluePressurePlate)
+		elif tile_name == "RedDoor":
+			var redDoor = RedDoor.instance()
+			redDoors.append(redDoor)
+			replace_tile(tile_xy, redDoor)
+		elif tile_name == "BlueDoor":
+			var blueDoor = BlueDoor.instance()
+			blueDoors.append(blueDoor)
+			replace_tile(tile_xy, blueDoor)
 		else:
 			print("Found unknown tile " + tile_name + " at " + str(tile_xy))
+	
+	for redPressurePlate in redPressurePlates:
+		for redDoor in redDoors:
+			redPressurePlate.connect("isPressed", redDoor, "_on_Button_isPressed")
+	for bluePressurePlate in bluePressurePlates:
+		for blueDoor in blueDoors:
+			bluePressurePlate.connect("isPressed", blueDoor, "_on_Button_isPressed")
+
+
 
 func replace_tile(tile_xy: Vector2, obj: Node2D):
 	obj.set_position(TileMap.map_to_world(tile_xy))
@@ -36,8 +62,6 @@ func replace_tile(tile_xy: Vector2, obj: Node2D):
 	TileMap.set_cellv(tile_xy, -1)
 	
 	print("Replaced tile at " + str(tile_xy) + " with " + str(obj.name))
-
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -10,7 +10,6 @@ func _ready():
 "
 
 [node name="Game" type="Node2D"]
-position = Vector2( 3.19739, 0 )
 script = ExtResource( 1 )
 
 [node name="BackgroundColor" type="CanvasLayer" parent="."]
