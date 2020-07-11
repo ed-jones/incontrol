@@ -4,7 +4,9 @@ var direction_up: Vector2
 var direction_right: Vector2
 var direction_down: Vector2
 var direction_left: Vector2
-var velocity: float = 4
+var velocity: float = 180
+
+var push = 80
 
 func _ready():
 	pass # Replace with function body.
@@ -16,9 +18,16 @@ func _process(_delta):
 		direction_down + \
 		direction_left
 
-	var collision = move_and_collide(direction*velocity)
-	
-	if collision:
+	var _collision = move_and_slide(direction*velocity, Vector2.UP,
+		false, 4, PI/4, false
+		)
+
+func _physics_process(delta):
+
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("bodies"):
+			collision.collider.apply_central_impulse(-collision.normal * push)
 		if collision.collider.has_method("nextRoom"):
 			collision.collider.nextRoom()
 
