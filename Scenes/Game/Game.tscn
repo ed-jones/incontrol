@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Game/ColorRect.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Game/Levels/Level1.tscn" type="PackedScene" id=2]
 
 [node name="Game" type="Node2D"]
 position = Vector2( 1.19739, 0 )
@@ -18,4 +18,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Level" parent="." instance=ExtResource( 4 )]
+[node name="Level" parent="." instance=ExtResource( 2 )]
