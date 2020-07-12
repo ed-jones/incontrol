@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/doorClosed.png-7334482e802c76dd666b196bb7ba47a9.stex"
+path="res://.import/redPressurePlatePressed.png-e282240e6cae488a82601a3d2601e984.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Tiles/Assets/doorClosed.png"
-dest_files=[ "res://.import/doorClosed.png-7334482e802c76dd666b196bb7ba47a9.stex" ]
+source_file="res://Scenes/Tiles/Assets/redPressurePlatePressed.png"
+dest_files=[ "res://.import/redPressurePlatePressed.png-e282240e6cae488a82601a3d2601e984.stex" ]
 
 [params]
 

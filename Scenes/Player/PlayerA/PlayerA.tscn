@@ -4,12 +4,10 @@
 [ext_resource path="res://Scenes/Player/PlayerA/PlayerA.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Tiles/Assets/PlayerA.png" type="Texture" id=3]
 
-
 [node name="PlayerA" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="1"]
-position = Vector2( -43.2748, -45.4808 )
-scale = Vector2( 0.84051, 0.812425 )
+position = Vector2( -32, -32 )
 texture = ExtResource( 3 )
 centered = false

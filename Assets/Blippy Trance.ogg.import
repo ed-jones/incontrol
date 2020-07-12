@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Blippy Trance.ogg-2bb517f6033c6fdb3a50fa84f4eaabe0.oggstr"
+
+[deps]
+
+source_file="res://Assets/Blippy Trance.ogg"
+dest_files=[ "res://.import/Blippy Trance.ogg-2bb517f6033c6fdb3a50fa84f4eaabe0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
