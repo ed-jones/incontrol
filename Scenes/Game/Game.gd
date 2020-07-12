@@ -7,7 +7,10 @@ const levels: Array = [
 	preload("res://Scenes/Game/Levels/Level4.tscn"),
 	preload("res://Scenes/Game/Levels/Level5.tscn"),
 	preload("res://Scenes/Game/Levels/Level6.tscn"),
-	preload("res://Scenes/Game/Levels/Level7.tscn")
+	preload("res://Scenes/Game/Levels/Level7.tscn"),
+	preload("res://Scenes/Game/Levels/Level8.tscn"),
+	preload("res://Scenes/Game/Levels/Level9.tscn"),
+	preload("res://Scenes/Game/Levels/Level10.tscn"),
 ]
 
 const GAMEOVER = preload("res://Scenes/Game/Menu/GameOver.tscn")
