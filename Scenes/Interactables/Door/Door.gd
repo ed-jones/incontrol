@@ -4,17 +4,17 @@ var isOpen: bool = false
 
 func openDoor():
 	isOpen = true
+	$Sprite.set_animation("open")
 
 func closeDoor():
 	isOpen = false
+	$Sprite.set_animation("close")
 
 func nextRoom():
-	print("Touched Door")
 	if isOpen:
 		find_parent("Game").nextRoom()
 
 func _on_Button_isPressed(isPressed):
-	print("BUTTON PRESSED")
 	if isPressed:
 		openDoor()
 	else:

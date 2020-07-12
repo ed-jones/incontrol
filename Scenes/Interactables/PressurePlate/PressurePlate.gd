@@ -1,12 +1,9 @@
-extends StaticBody2D
+extends Area2D
 
 signal isPressed(isPressed)
-
-func _ready():
-	pass
-
-func press():
+	
+func _on_PressurePlate_body_entered(_body):
 	emit_signal('isPressed', true)
 
-func release():
+func _on_PressurePlate_body_exited(_body):
 	emit_signal('isPressed', false)
