@@ -64,7 +64,8 @@ func _ready():
 		for blueDoor in blueDoors:
 			bluePressurePlate.connect("isPressed", blueDoor, "_on_Button_isPressed")
 
-
+func restart_level():
+	get_parent().restart_level()
 
 func replace_tile(tile_xy: Vector2, obj: Node2D):
 	obj.set_position(TileMap.map_to_world(tile_xy))
@@ -75,6 +76,6 @@ func replace_tile(tile_xy: Vector2, obj: Node2D):
 	
 	print("Replaced tile at " + str(tile_xy) + " with " + str(obj.name))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _input(event):
+	if event.is_action_pressed('restart_level'):
+		restart_level()

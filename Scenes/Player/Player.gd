@@ -26,8 +26,11 @@ func move(direction: Vector2):
 		elif collider.is_in_group("Doors"):
 			if collider.isOpen:
 				enabled = false
-				queue_free()
+				$AudioCorrect.play()
+				move_tween(direction)
 				collider.nextRoom()
+			else:
+				$AudioWrong.play()
 
 func move_tween(direction):
 	tween.interpolate_property(self, "position",
@@ -35,3 +38,7 @@ func move_tween(direction):
 		1.0/velocity, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	tween.start()
 	
+
+func _on_Tween_tween_all_completed():
+	if !enabled:
+		queue_free()

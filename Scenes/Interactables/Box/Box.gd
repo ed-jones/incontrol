@@ -18,5 +18,6 @@ func push(direction: Vector2):
 			position, position + direction * tile_size,
 			1.0/velocity, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		tween.start()
+		$AudioStreamPlayer.play()
 		return true
 	return false

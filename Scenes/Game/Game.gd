@@ -3,8 +3,14 @@ extends Node2D
 const levels: Array = [
 	preload("res://Scenes/Game/Levels/Level1.tscn"),
 	preload("res://Scenes/Game/Levels/Level2.tscn"),
-	preload("res://Scenes/Game/Levels/Level3.tscn")
+	preload("res://Scenes/Game/Levels/Level3.tscn"),
+	preload("res://Scenes/Game/Levels/Level4.tscn"),
+	preload("res://Scenes/Game/Levels/Level5.tscn"),
+	preload("res://Scenes/Game/Levels/Level6.tscn"),
+	preload("res://Scenes/Game/Levels/Level7.tscn")
 ]
+
+const GAMEOVER = preload("res://Scenes/Game/Menu/GameOver.tscn")
 
 var currentRoom: int = 0
 var currentLevel: Object
@@ -26,7 +32,7 @@ func addRoom(roomNum):
 		currentLevel = levels[roomNum].instance()
 		add_child(currentLevel)
 	else:
-		push_error("Tried to access a level that doesn't exist")
+		add_child(GAMEOVER.instance())
 		
 func isRoomEmpty():
 	for node in ["Entities/PlayerA", "Entities/PlayerB"]:
@@ -34,3 +40,7 @@ func isRoomEmpty():
 			if currentLevel.get_node(node).enabled:
 				return false
 	return true
+	
+func restart_level():
+	if has_node("Level"): remove_child($Level)
+	addRoom(currentRoom)

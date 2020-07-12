@@ -1,16 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Interactables/PressurePlate/PressurePlate.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Tiles/Assets/bluePressurePlate.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Tiles/Assets/bluePressurePlatePressed.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Tiles/Assets/bluePressurePlate.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "pressed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "released",
 "speed": 5.0

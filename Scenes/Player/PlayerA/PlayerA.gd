@@ -1,12 +1,12 @@
 extends "res://Scenes/Player/Player.gd"
 
 func _process(_delta):
-	if Input.is_action_pressed('player_up'):
+	if Input.is_action_just_pressed('player_up'):
 		move(Vector2.UP)
-	if Input.is_action_pressed('player_right'):
+	if Input.is_action_just_pressed('player_right'):
 		move(Vector2.RIGHT)
-	if Input.is_action_pressed('player_down'):
+	if Input.is_action_just_pressed('player_down'):
 		move(Vector2.DOWN)
-	if Input.is_action_pressed('player_left'):
+	if Input.is_action_just_pressed('player_left'):
 		move(Vector2.LEFT)
 		
