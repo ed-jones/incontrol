@@ -16,7 +16,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="PlayerA" parent="Entities" instance=ExtResource( 3 )]
-position = Vector2( 156, 191 )
+position = Vector2( 130, 190 )
 
 [node name="PlayerB" parent="Entities" instance=ExtResource( 4 )]
-position = Vector2( 264, 512 )
+position = Vector2( 130, 510 )

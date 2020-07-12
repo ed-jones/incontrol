@@ -1,20 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player/PlayerB/PlayerB.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Player/PlayerB/PlayerB.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
-
 [node name="PlayerB" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-
 [node name="Sprite" parent="." index="1"]
-position = Vector2( -12, -30 )
+position = Vector2( -41.6697, -61.0092 )
+scale = Vector2( 0.869186, 0.968605 )
 texture = ExtResource( 3 )
 centered = false
