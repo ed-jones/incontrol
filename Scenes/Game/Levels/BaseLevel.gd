@@ -1,6 +1,7 @@
 extends Node2D
 
 const Box = preload("res://Scenes/Interactables/Box/Box.tscn")
+const OpenDoor = preload("res://Scenes/Interactables/Door/OpenDoor.tscn")
 const RedDoor = preload("res://Scenes/Interactables/Door/RedDoor.tscn")
 const BlueDoor = preload("res://Scenes/Interactables/Door/BlueDoor.tscn")
 const RedPressurePlate = preload("res://Scenes/Interactables/PressurePlate/RedPressurePlate.tscn")
@@ -42,6 +43,9 @@ func _ready():
 			var blueDoor = BlueDoor.instance()
 			blueDoors.append(blueDoor)
 			replace_tile(tile_xy, blueDoor)
+		elif tile_name == "OpenDoor":
+			var openDoor = OpenDoor.instance()
+			replace_tile(tile_xy, openDoor)
 		else:
 			print("Found unknown tile " + tile_name + " at " + str(tile_xy))
 	

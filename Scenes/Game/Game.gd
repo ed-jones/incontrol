@@ -5,15 +5,31 @@ const levels: Array = [
 	preload("res://Scenes/Game/Levels/Level2.tscn")
 ]
 
-var nextRoomNumber: int = 0
+var currentRoom: int = 0
+var currentLevel
 
 func _ready():
-	nextRoom()
+	initRoom()
 
+func initRoom():
+	addRoom(0)
+	
 func nextRoom():
-	if (nextRoomNumber < len(levels)):
+	if isRoomEmpty():
+		currentRoom+=1
 		if has_node("Level"): remove_child($Level)
-		add_child(levels[nextRoomNumber].instance())
-		nextRoomNumber+=1
+		addRoom(currentRoom)
+		
+func addRoom(roomNum):
+	if (roomNum < len(levels)):
+		currentLevel = levels[roomNum].instance()
+		add_child(currentLevel)
 	else:
 		push_error("Tried to access a level that doesn't exist")
+		
+func isRoomEmpty():
+	for node in ["Entities/PlayerA", "Entities/PlayerB"]:
+		if currentLevel.has_node(node):
+			if currentLevel.get_node(node).enabled:
+				return false
+	return true

@@ -13,6 +13,8 @@ func closeDoor():
 func nextRoom():
 	if isOpen:
 		find_parent("Game").nextRoom()
+		return true
+	return false
 
 func _on_Button_isPressed(isPressed):
 	if isPressed:
