@@ -6,6 +6,8 @@ const RedDoor = preload("res://Scenes/Interactables/Door/RedDoor.tscn")
 const BlueDoor = preload("res://Scenes/Interactables/Door/BlueDoor.tscn")
 const RedPressurePlate = preload("res://Scenes/Interactables/PressurePlate/RedPressurePlate.tscn")
 const BluePressurePlate = preload("res://Scenes/Interactables/PressurePlate/BluePressurePlate.tscn")
+const PlayerA = preload("res://Scenes/Player/PlayerA/PlayerA.tscn")
+const PlayerB = preload("res://Scenes/Player/PlayerB/PlayerB.tscn")
 
 onready var TileMap = $TileMap
 
@@ -46,6 +48,12 @@ func _ready():
 		elif tile_name == "OpenDoor":
 			var openDoor = OpenDoor.instance()
 			replace_tile(tile_xy, openDoor)
+		elif tile_name == "PlayerA":
+			var playerA = PlayerA.instance()
+			replace_tile(tile_xy, playerA)
+		elif tile_name == "PlayerB":
+			var playerB = PlayerB.instance()
+			replace_tile(tile_xy, playerB)
 		else:
 			print("Found unknown tile " + tile_name + " at " + str(tile_xy))
 	

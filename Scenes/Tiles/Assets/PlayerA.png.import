@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerB.png-15f9c97ba8aef7874f4aad33023b25e9.stex"
+path="res://.import/PlayerA.png-001026f3c0034ad9f6bde5474a2a084e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Player/PlayerB/PlayerB.png"
-dest_files=[ "res://.import/PlayerB.png-15f9c97ba8aef7874f4aad33023b25e9.stex" ]
+source_file="res://Scenes/Tiles/Assets/PlayerA.png"
+dest_files=[ "res://.import/PlayerA.png-001026f3c0034ad9f6bde5474a2a084e.stex" ]
 
 [params]
 

@@ -11,7 +11,7 @@ func _ready():
 	position += Vector2.ONE * tile_size/2
 	ray.set_collide_with_areas(true)
 
-func move(direction):
+func move(direction: Vector2):
 	if tween.is_active():
         return
 	ray.cast_to = direction * tile_size
@@ -21,8 +21,8 @@ func move(direction):
 	else:
 		var collider = ray.get_collider()
 		if collider.is_in_group("bodies"):
-			collider.push(direction)
-			move_tween(direction)
+			if collider.push(direction):
+				move_tween(direction)
 		elif collider.is_in_group("Doors"):
 			if collider.isOpen:
 				enabled = false

@@ -2,11 +2,12 @@ extends Node2D
 
 const levels: Array = [
 	preload("res://Scenes/Game/Levels/Level1.tscn"),
-	preload("res://Scenes/Game/Levels/Level2.tscn")
+	preload("res://Scenes/Game/Levels/Level2.tscn"),
+	preload("res://Scenes/Game/Levels/Level3.tscn")
 ]
 
 var currentRoom: int = 0
-var currentLevel
+var currentLevel: Object
 
 func _ready():
 	initRoom()
