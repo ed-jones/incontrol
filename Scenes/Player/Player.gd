@@ -1,6 +1,6 @@
 extends Area2D
 
-const velocity: float = 4.0
+const velocity: int = 4
 var direction: Vector2
 var target_pos: Vector2
 var push = 80
@@ -21,6 +21,7 @@ onready var tween = $Tween
 func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
+	ray.set_collide_with_areas(true)
 
 func move(direction):
 	if tween.is_active():
@@ -29,6 +30,11 @@ func move(direction):
 	ray.force_raycast_update()
 	if !ray.is_colliding():
 		move_tween(direction)
+	else:
+		var collider = ray.get_collider()
+		if collider.is_in_group("bodies"):
+			collider.push(direction)
+			move_tween(direction)
 		
 func move_tween(direction):
 	tween.interpolate_property(self, "position",

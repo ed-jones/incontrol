@@ -29,6 +29,7 @@ position = Vector2( 32, 32 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
+z_index = -1
 frames = SubResource( 2 )
 [connection signal="area_entered" from="." to="." method="_on_PressurePlate_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_PressurePlate_area_exited"]
