@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pressurePlate.wav-7d3094e959c57761dcce50621de80b65.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/pressurePlate.wav"
+dest_files=[ "res://.import/pressurePlate.wav-7d3094e959c57761dcce50621de80b65.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

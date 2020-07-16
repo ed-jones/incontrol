@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Menu/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://Tiles/LevelTileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://theme.tres" type="Theme" id=4]
+
+
+
+
+[node name="Background" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="CanvasLayer" index="1"]
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65551, 0, 0, 131072, 0, 0, 131087, 0, 0, 196608, 0, 0, 196623, 0, 0, 262144, 0, 0, 262159, 0, 0, 327680, 0, 0, 327695, 0, 0, 393216, 0, 0, 393231, 0, 0, 458752, 0, 0, 458767, 0, 0, 524288, 0, 0, 524303, 0, 0, 589824, 0, 0, 589839, 0, 0, 655360, 0, 0, 655375, 0, 0, 720896, 0, 0, 720911, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0 )
+
+[node name="UI" type="CanvasLayer" parent="." index="1"]
+
+[node name="CenterContainer" type="CenterContainer" parent="UI" index="0"]
+margin_left = -2.93854
+margin_right = 1021.06
+margin_bottom = 832.0
+theme = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/CenterContainer" index="0"]
+margin_left = 422.0
+margin_top = 375.0
+margin_right = 602.0
+margin_bottom = 457.0
+alignment = 1
+
+[node name="Label" type="Label" parent="UI/CenterContainer/VBoxContainer" index="0"]
+margin_right = 180.0
+margin_bottom = 36.0
+text = "YOU WIN"
+align = 1
+
+[node name="Replay" type="Button" parent="UI/CenterContainer/VBoxContainer" index="1"]
+margin_top = 40.0
+margin_right = 180.0
+margin_bottom = 82.0
+text = "Replay?"
+[connection signal="pressed" from="UI/CenterContainer/VBoxContainer/Replay" to="." method="_on_Replay_pressed"]

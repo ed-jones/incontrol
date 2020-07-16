@@ -1,0 +1,1 @@
+extends "res://Tiles/Interactables/Moveable.gd"
