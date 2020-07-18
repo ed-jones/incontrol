@@ -1,7 +1,7 @@
 class_name Moveable
 extends Area2D
 
-const velocity := 5.0
+const velocity := 4.0
 const tile_size := 64
 
 onready var ray: RayCast2D = $RayCast2D
