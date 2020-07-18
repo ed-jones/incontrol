@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tiles/Moveable/Moveable.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Tiles/Moveable/Player/Player.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Sounds/beep.wav" type="AudioStream" id=3]
+[ext_resource path="res://tiles/moveable/player/player.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/correct.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Sounds/wrong.wav" type="AudioStream" id=4]
 
 [node name="Moveable" instance=ExtResource( 1 )]

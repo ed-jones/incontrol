@@ -2,19 +2,19 @@ class_name Game
 extends Node2D
 
 const levels: Array = [
-	preload("res://Game/Levels/Level1.tscn"),
-	preload("res://Game/Levels/Level2.tscn"),
-	preload("res://Game/Levels/Level3.tscn"),
-	preload("res://Game/Levels/Level4.tscn"),
-	preload("res://Game/Levels/Level5.tscn"),
-	preload("res://Game/Levels/Level6.tscn"),
-	preload("res://Game/Levels/Level7.tscn"),
-	preload("res://Game/Levels/Level8.tscn"),
-	preload("res://Game/Levels/Level9.tscn"),
-	preload("res://Game/Levels/Level10.tscn"),
+	preload("res://game/levels/level1.tscn"),
+	preload("res://game/levels/level2.tscn"),
+	preload("res://game/levels/level3.tscn"),
+	preload("res://game/levels/level4.tscn"),
+	preload("res://game/levels/level5.tscn"),
+	preload("res://game/levels/level6.tscn"),
+	preload("res://game/levels/level7.tscn"),
+	preload("res://game/levels/level8.tscn"),
+	preload("res://game/levels/level9.tscn"),
+	preload("res://game/levels/level10.tscn"),
 ]
 
-const GAME_OVER = preload("res://Game/Menu/GameOver.tscn")
+const GAME_OVER = preload("res://game/menu/game_over.tscn")
 
 var current_room := 0
 var current_level: BaseLevel

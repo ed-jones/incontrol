@@ -12,62 +12,72 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "BaseLevel",
 "language": "GDScript",
-"path": "res://Game/Levels/BaseLevel.gd"
+"path": "res://game/levels/base_level.gd"
 }, {
 "base": "Door",
 "class": "BlueDoor",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/Door/BlueDoor/blue_door.gd"
+"path": "res://tiles/fixed/door/blue_door/blue_door.gd"
 }, {
 "base": "PressurePlate",
 "class": "BluePressurePlate",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/PressurePlate/BluePressurePlate/blue_pressure_plate.gd"
+"path": "res://tiles/fixed/button/blue_button/blue_button.gd"
 }, {
 "base": "Fixed",
 "class": "Door",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/Door/Door.gd"
+"path": "res://tiles/fixed/door/door.gd"
 }, {
 "base": "Node2D",
 "class": "Fixed",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/Fixed.gd"
+"path": "res://tiles/fixed/fixed.gd"
 }, {
 "base": "Node2D",
 "class": "Game",
 "language": "GDScript",
-"path": "res://Game/Game.gd"
+"path": "res://game/game.gd"
+}, {
+"base": "Node2D",
+"class": "GameOver",
+"language": "GDScript",
+"path": "res://game/menu/game_over.gd"
+}, {
+"base": "Node2D",
+"class": "Menu",
+"language": "GDScript",
+"path": "res://game/menu/menu.gd"
 }, {
 "base": "Area2D",
 "class": "Moveable",
 "language": "GDScript",
-"path": "res://Tiles/Moveable/Moveable.gd"
+"path": "res://tiles/moveable/moveable.gd"
 }, {
 "base": "Door",
 "class": "OpenDoor",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/Door/OpenDoor/OpenDoor.gd"
+"path": "res://tiles/fixed/door/open_door/open_door.gd"
 }, {
 "base": "Area2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Tiles/Moveable/Player/Player.gd"
+"path": "res://tiles/moveable/player/player.gd"
 }, {
 "base": "Fixed",
 "class": "PressurePlate",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/PressurePlate/PressurePlate.gd"
+"path": "res://tiles/fixed/button/button.gd"
 }, {
 "base": "Door",
 "class": "RedDoor",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/Door/RedDoor/red_door.gd"
+"path": "res://tiles/fixed/door/red_door/red_door.gd"
 }, {
 "base": "PressurePlate",
 "class": "RedPressurePlate",
 "language": "GDScript",
-"path": "res://Tiles/Fixed/PressurePlate/RedPressurePlate/red_pressure_plate.gd"
+"path": "res://tiles/fixed/button/red_button/red_button.gd"
 } ]
 _global_script_class_icons={
 "BaseLevel": "",
@@ -76,6 +86,8 @@ _global_script_class_icons={
 "Door": "",
 "Fixed": "",
 "Game": "",
+"GameOver": "",
+"Menu": "",
 "Moveable": "",
 "OpenDoor": "",
 "Player": "",
@@ -87,7 +99,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GMTK2020"
-run/main_scene="res://Game/Viewport.tscn"
+run/main_scene="res://game/viewport.tscn"
 config/icon="res://icon.png"
 
 [display]

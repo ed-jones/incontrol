@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/incontrol.png-e78678d73384e67ff90ce47b91fb2a5d.stex"
+path="res://.import/incontrol.png-f5c22e319e0ad141868cd6260b3dcfc3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Logo/incontrol.png"
-dest_files=[ "res://.import/incontrol.png-e78678d73384e67ff90ce47b91fb2a5d.stex" ]
+source_file="res://assets/logo/incontrol.png"
+dest_files=[ "res://.import/incontrol.png-f5c22e319e0ad141868cd6260b3dcfc3.stex" ]
 
 [params]
 

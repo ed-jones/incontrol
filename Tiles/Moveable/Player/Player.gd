@@ -1,5 +1,5 @@
 class_name Player
-extends "res://Tiles/Moveable/Moveable.gd"
+extends "res://tiles/moveable/moveable.gd"
 
 var enabled := true
 var _movement_dictionary: Dictionary
