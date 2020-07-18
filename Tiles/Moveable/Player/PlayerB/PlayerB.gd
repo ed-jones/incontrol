@@ -1,11 +1,9 @@
 extends "res://Tiles/Moveable/Player/Player.gd"
 
-func _process(_delta):
-	if Input.is_action_pressed('player_up'):
-		move(Vector2.DOWN)
-	if Input.is_action_pressed('player_right'):
-		move(Vector2.LEFT)
-	if Input.is_action_pressed('player_down'):
-		move(Vector2.UP)
-	if Input.is_action_pressed('player_left'):
-		move(Vector2.RIGHT)
+func _init():
+	_movement_dictionary = {
+		"player_up": Vector2.DOWN,
+		"player_right": Vector2.LEFT,
+		"player_down": Vector2.UP,
+		"player_left": Vector2.RIGHT,
+	}

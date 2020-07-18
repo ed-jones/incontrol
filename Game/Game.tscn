@@ -4,11 +4,8 @@
 [ext_resource path="res://Game/Game.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Music/Blippy Trance.ogg" type="AudioStream" id=3]
 
-
-
 [node name="Game" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
 stream = ExtResource( 3 )
-autoplay = true

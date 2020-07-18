@@ -1,16 +1,15 @@
+class_name Fixed
 extends Node2D
 
+enum Colors {
+	BLUE,
+	RED,
+}
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var _color: int
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func get_color() -> int:
+	return _color
+	
+func set_color(color) -> void:
+	_color = color
