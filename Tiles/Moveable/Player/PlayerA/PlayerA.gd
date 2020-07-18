@@ -1,6 +1,6 @@
 extends "res://Tiles/Moveable/Player/Player.gd"
 
-func _init():
+func _init() -> void:
 	_movement_dictionary = {
 		"player_up": Vector2.UP,
 		"player_right": Vector2.RIGHT,

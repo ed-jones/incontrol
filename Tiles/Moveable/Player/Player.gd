@@ -4,7 +4,7 @@ extends "res://Tiles/Moveable/Moveable.gd"
 var enabled := true
 var _movement_dictionary: Dictionary
 
-func _process(_delta):
+func _process(_delta) -> void:
 	for key_press in _movement_dictionary:
 		if Input.is_action_pressed(key_press):
 			var _did_move = move(_movement_dictionary[key_press])

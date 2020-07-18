@@ -4,5 +4,5 @@ extends Door
 func _ready() -> void:
 	is_open = true
 	
-func _connect_to_button():
+func _connect_to_button() -> void:
 	return

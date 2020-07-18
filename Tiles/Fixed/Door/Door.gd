@@ -4,7 +4,7 @@ extends Fixed
 var is_open: bool = false
 
 func _ready() -> void:
-	var level = find_parent("Level")
+	var level: BaseLevel = find_parent("Level")
 	level.connect("is_loaded", self, "_on_level_is_loaded")
 
 func _connect_to_button() -> void:
