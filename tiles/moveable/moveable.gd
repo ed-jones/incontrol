@@ -44,7 +44,7 @@ func handle_collision(collider: Node2D, direction: Vector2, _is_echo: bool) -> b
 func move_tween(direction) -> void:
 	if tween.interpolate_property(self, "position",
 			position, position + direction * tile_size,
-			1.0/velocity, Tween.TRANS_SINE, Tween.EASE_IN_OUT):
+			1.0/velocity, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT):
 		_play_move_sound()
 	else:
 		print("Unable to interpolate property")

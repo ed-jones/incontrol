@@ -4,6 +4,12 @@ extends "res://tiles/moveable/moveable.gd"
 var enabled := true
 var _movement_dictionary: Dictionary
 var _is_echo := false
+var _directions := {
+	"up": "player_up",
+	"right": "player_right",
+	"down": "player_down",
+	"left": "player_left",
+}
 
 func _process(_delta):
 	for key_press in _movement_dictionary:
@@ -32,3 +38,6 @@ func _on_Tween_tween_all_completed() -> void:
 		if not game.has_players():
 			game.next_room()
 		queue_free()
+
+func _on_SwipeDetector_swiped(gesture):
+	var _did_move = move(_movement_dictionary[_directions[gesture.get_direction()]], false)
