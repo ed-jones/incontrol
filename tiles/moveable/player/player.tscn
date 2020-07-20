@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/sounds/correct.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Sounds/wrong.wav" type="AudioStream" id=4]
 
-[node name="Moveable" groups=[
+[node name="Moveable" index="0" groups=[
 "Players",
 ] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
