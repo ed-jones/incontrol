@@ -37,7 +37,7 @@ func prev_room() -> void:
 
 
 func change_room(new_room: int) -> void:
-	if new_room >= 0 and new_room < len(levels):
+	if new_room >= 0 and new_room <= len(levels):
 		remove_room()
 		add_room(new_room)
 		current_room = new_room
@@ -70,6 +70,7 @@ func restart_level() -> void:
 	if has_node("Level"): 
 		remove_child($Level)
 	add_room(current_room)
+	
 	
 func _input(event) -> void:
 	var just_pressed = event.is_pressed() and not event.is_echo()

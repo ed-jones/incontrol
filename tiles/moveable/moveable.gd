@@ -31,6 +31,9 @@ func handle_collision(collider: Node2D, direction: Vector2) -> bool:
 	if collider.is_in_group("Buttons"):
 		move_tween(direction)
 		return true
+	if collider.is_in_group("Players"):
+		move_tween(direction)
+		return true
 	elif collider.is_in_group("Boxes"):
 		if collider.move(direction):
 			move_tween(direction)
