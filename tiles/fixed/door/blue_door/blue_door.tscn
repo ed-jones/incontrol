@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Tiles/Fixed/Door/Door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tiles/fixed/door/door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tiles/fixed/door/blue_door/blue_door.gd" type="Script" id=2]
 [ext_resource path="res://tiles/fixed/door/blue_door/blue_door.tres" type="SpriteFrames" id=3]
 

@@ -20,7 +20,7 @@ const EuclideanMatch = preload("matching/euclidean_match.gd")
 
 # Singleton Imports
 
-var Directions = preload("directions.gd").new()
+#var Directions = preload("directions.gd").new()
 var InputProvider = preload("input/input_provider.gd").new()
 
 

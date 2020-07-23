@@ -19,10 +19,12 @@ const GAME_OVER = preload("res://game/menu/game_over.tscn")
 var current_room := 0
 var current_level: BaseLevel
 
+
 func _ready() -> void:
 	init_room()
 	if not OS.is_debug_build():
-		$AudioStreamPlayer.start()
+		$AudioStreamPlayer.play()
+
 
 func init_room() -> void:
 	add_room(current_room)

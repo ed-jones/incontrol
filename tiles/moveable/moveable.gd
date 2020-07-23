@@ -1,8 +1,8 @@
 class_name Moveable
 extends Area2D
 
-const velocity := 5.0
-const tile_size := 64
+const VELOCITY := 5.0
+const TILE_SIZE := 16
 
 onready var ray: RayCast2D = $RayCast2D
 onready var tween: Tween = $Tween
@@ -16,7 +16,7 @@ func move(direction: Vector2, is_echo: bool) -> bool:
 	if tween.is_active():
         return false
 
-	ray.cast_to = direction * tile_size
+	ray.cast_to = direction * TILE_SIZE
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		var collider = ray.get_collider()
@@ -43,8 +43,8 @@ func handle_collision(collider: Node2D, direction: Vector2, _is_echo: bool) -> b
 
 func move_tween(direction) -> void:
 	if tween.interpolate_property(self, "position",
-			position, position + direction * tile_size,
-			1.0/velocity, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT):
+			position, position + direction * TILE_SIZE,
+			1.0/VELOCITY, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT):
 		_play_move_sound()
 	else:
 		print("Unable to interpolate property")

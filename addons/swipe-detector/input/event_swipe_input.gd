@@ -29,7 +29,7 @@ func valid_event(event):
       break
   return is_valid
 
-func process_area_input(viewport, event, shape_id, area):
+func process_area_input(_viewport, event, _shape_id, area):
   process_input(event, area)
 
 func process_input(event, area=null):
@@ -43,7 +43,7 @@ func process_input(event, area=null):
     process_event(event, state.delta, state)
     state.last_time = OS.get_ticks_msec()
 
-func process_event(event, delta, state):
+func process_event(_event, _delta, _state):
   pass
 
 func swiping(area):

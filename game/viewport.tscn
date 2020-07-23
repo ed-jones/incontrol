@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Game/Menu/Menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game/menu/menu.tscn" type="PackedScene" id=1]
 
 [node name="ViewportContainer" type="ViewportContainer"]
-margin_right = 1024.0
+margin_right = 256.0
 margin_bottom = 1024.0
 __meta__ = {
 "_edit_use_anchors_": false

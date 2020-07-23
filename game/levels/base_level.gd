@@ -3,7 +3,7 @@ extends Node2D
 
 signal is_loaded()
 
-const TILE_SIZE := 64
+const TILE_SIZE := 16
 
 var _tile_dictionary := {
 	"Box": preload("res://tiles/moveable/box/box.tscn"),

@@ -39,5 +39,6 @@ func _on_Tween_tween_all_completed() -> void:
 			game.next_room()
 		queue_free()
 
+
 func _on_SwipeDetector_swiped(gesture):
 	var _did_move = move(_movement_dictionary[_directions[gesture.get_direction()]], false)

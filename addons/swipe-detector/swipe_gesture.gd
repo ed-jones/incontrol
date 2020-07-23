@@ -88,7 +88,7 @@ func get_point(index):
 func point_count():
   return points.size()
 
-func relative():
+func _relative():
   if relative == null:
     relative = duplicate()
     relative.points = []

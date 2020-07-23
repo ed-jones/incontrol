@@ -2,7 +2,7 @@
 
 var sample
 var pattern
-var score
+var _score
 var threshold
 
 func _init(sampleGesture, patternGesture, threshold):
@@ -11,7 +11,7 @@ func _init(sampleGesture, patternGesture, threshold):
   self.pattern = patternGesture
 
 func score():
-  if score == null:
+  if _score == null:
     var relative_pattern = pattern.gesture.relative()
     var relative_sample  = sample.relative()
     var sample_scale = scale(relative_pattern, relative_sample)
@@ -23,8 +23,8 @@ func score():
     elif pointsB.size() > pointsA.size():
       pointsB = pick_samples(pointsB, pointsA.size())
 
-    score = similarity_algorithm().similarity_score(pointsA, pointsB)
-  return score
+    _score = similarity_algorithm().similarity_score(pointsA, pointsB)
+  return _score
 
 func similarity_algorithm():
   print('Subclass Responsibility!')
